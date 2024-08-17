@@ -37,6 +37,8 @@ public class PlayerInteractionController : MonoBehaviour
             if (interactable != null)
             {
                 playerInventory.items.Add(new ItemData(interactable.itemData));
+                interactable.ItemInteracted();
+
                 Destroy(hit.transform.gameObject);
             }
         }

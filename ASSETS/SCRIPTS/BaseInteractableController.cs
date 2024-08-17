@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,4 +16,19 @@ public class BaseInteractableController : MonoBehaviour
 {
     public InteractableType type = InteractableType.Item;
     public ItemData itemData = new ItemData();
+
+    public Action OnItemInteractedAction;
+
+    public void Start()
+    {
+        if(type == InteractableType.Item)
+        {
+            ItemCollectionManager.Instance.AddInteractableToCollectibles(this);
+        }
+    }
+
+    public void ItemInteracted()
+    {
+        OnItemInteractedAction?.Invoke();
+    }
 }
