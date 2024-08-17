@@ -9,6 +9,7 @@ public class ItemCollectionManager : MonoBehaviour
     public List<ItemData> collectibleItems = new List<ItemData>();
 
     public ItemsPanelView view;
+    public PickUpInfoBoardController infoBoardController;
 
     public void Awake()
     {
@@ -37,6 +38,7 @@ public class ItemCollectionManager : MonoBehaviour
     void OnItemCollectedAction(BaseInteractableController item)
     {
         view.RemoveNamePlate(item.itemData.itemName);
+        infoBoardController.OnItemInteracted(item.itemData.itemName);
     }
 
 
