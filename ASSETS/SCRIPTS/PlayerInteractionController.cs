@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerInteractionController : MonoBehaviour
 {
     public GameObject clickIndicator;
+    public AudioSource interactionAudioSource;
 
     public CharacterInventoryData playerInventory = new CharacterInventoryData();
 
@@ -38,6 +39,7 @@ public class PlayerInteractionController : MonoBehaviour
             {
                 playerInventory.items.Add(new ItemData(interactable.itemData));
                 interactable.ItemInteracted();
+                interactionAudioSource.Play();
 
                 Destroy(hit.transform.gameObject);
             }
