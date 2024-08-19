@@ -17,6 +17,7 @@ public class PickUpInfoBoardController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape) && Content.gameObject.activeInHierarchy)
         {
             Content.gameObject.SetActive(false);
+            ItemCollectionManager.Instance.CheckIfGameIsComplete();
         }
     }
 
