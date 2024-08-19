@@ -20,6 +20,10 @@ public class SplashScreenStart : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.Return) && curImageIdx == 1)
         {
             LoadGame();
+        } 
+        else if(Input.GetKeyDown(KeyCode.Space) && curImageIdx == 2)
+        {
+            LoadGame();
         }
     }
 

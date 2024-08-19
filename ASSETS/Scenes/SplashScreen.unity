@@ -333,6 +333,7 @@ MonoBehaviour:
   splashSprites:
   - {fileID: 21300000, guid: b2badd60c07407f42b706f808c6d2293, type: 3}
   - {fileID: 21300000, guid: 4f9f76db48091a44a8e7e36d9c5b1cd1, type: 3}
+  - {fileID: 21300000, guid: 82865794ca08f0c43ada681791c89a53, type: 3}
   curImageIdx: 0
 --- !u!4 &1339369861
 Transform:
